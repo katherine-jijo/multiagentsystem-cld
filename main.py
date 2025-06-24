@@ -16,8 +16,8 @@ class AgentState(TypedDict):
     summary: str
     message: str                # Final output message
 
-# Model used 
-llm = ChatOpenAI(temperature=0, model="azure.gpt-4o")
+# 🧠 LLM used across all agents
+llm = ChatOpenAI(model="gpt-4", temperature=0)
 
 # 🤖 Orchestrator Agent
 def orchestrator_agent(state: AgentState) -> AgentState:
